@@ -30,6 +30,7 @@ import javax.swing.SwingUtilities;
 
 import com.DB.userLog;
 import com.ImageGrid.Gui;
+import com.ImageGrid.SignageGridDataType;
 
 /**
  * Servlet implementation class ViewServer
@@ -41,20 +42,22 @@ public class ViewServer extends HttpServlet
       
 	public static final int gridx = 4;
 	public static final int gridy = 4;
+	public static SignageGridDataType SGDT = new SignageGridDataType();
 	
     public ViewServer() 
     {
         super();
 
         final File files[] = new File("C:\\ImageDB").listFiles();
-		
+        
+       		
 		SwingUtilities.invokeLater(new Runnable() 
 		{
 
 			@Override
 			public void run() 
 			{
-				new Gui(files, gridx, gridy, 1000);
+				new Gui(files, gridx, gridy, 1000, 4, SGDT);
 			}
 		});
     }

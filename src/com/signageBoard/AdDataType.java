@@ -13,30 +13,11 @@
 //*************************************************************************************
 
 
-package com.ImageGrid;
+package com.signageBoard;
 
-import java.io.File;
+import java.util.concurrent.ConcurrentHashMap;
 
-import javax.swing.SwingUtilities;
-
-public class ImgFrame 
+public class AdDataType 
 {
-	public static void main(String[] args) 
-	{
-
-		final File files[] = new File("C:\\ImageDB").listFiles();
-		final int gridx = 4;
-		final int gridy = 4;
-		
-		SwingUtilities.invokeLater(new Runnable() 
-		{
-
-			@Override
-			public void run() 
-			{
-				new Gui(files, gridx, gridy, 1000, 6, new SignageGridDataType());
-			}
-		});
-
-	}
+	public static ConcurrentHashMap<Integer, String> AdMap = new ConcurrentHashMap<Integer, String>();
 }
