@@ -19,7 +19,6 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.util.Random;
 
 import javax.swing.BorderFactory;
@@ -75,7 +74,7 @@ public class SignageView extends JFrame
 			
 			System.out.println("Signage board no : " + signage_no + " grid : " + i + "  " + currentFile);
 		}
-
+		
 
 		timer = new Timer(tm, new ActionListener() 
 		{

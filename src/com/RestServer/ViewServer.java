@@ -40,8 +40,10 @@ public class ViewServer extends HttpServlet
 {
 	private static final long serialVersionUID = 1L;
       
-	public static final int gridx = 4;
-	public static final int gridy = 4;
+	public static final int gridx = 3;
+	public static final int gridy = 3;
+	public static final int time = 10000;
+	
 	public static SignageGridDataType SGDT = new SignageGridDataType();
 	
     public ViewServer() 
@@ -57,7 +59,7 @@ public class ViewServer extends HttpServlet
 			@Override
 			public void run() 
 			{
-				new Gui(files, gridx, gridy, 1000, 4, SGDT);
+				new Gui(files, gridx, gridy, time, 4, SGDT);
 			}
 		});
     }
