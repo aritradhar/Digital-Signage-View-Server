@@ -87,8 +87,8 @@ public class Gui extends JFrame {
 
 				for(int i = 0; i < Gui.gridx * Gui.gridy; i++)
 				{
-					if(i%2 == 0)
-						continue;
+					//if(i%2 == 0)
+						//continue;
 					
 					String currentFile = Gui.files[rand.nextInt(Gui.files.length - 1)].toString();
 					jLabel[i].setIcon(new ImageIcon(currentFile));
